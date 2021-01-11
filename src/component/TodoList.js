@@ -20,7 +20,6 @@ class TodoList {
       if (todoText === "") {
         alert("입력해주세요.");
       } else {
-        console.log(toDos);
         this.handleAdd(todoText, toDos);
       }
     });
@@ -51,19 +50,15 @@ class TodoList {
     input.focus();
 
     const removeButton = li.querySelector(".todo-delete");
-    removeButton.addEventListener("click", function (e) {
-      const removeItem = e.target.parentNode;
-      removeItem.remove();
-
-      const cleanTodo = toDos.filter((item) => {
-        return item.id !== parseInt(removeItem.id);
-      });
-
-      toDos = cleanTodo;
+    removeButton.addEventListener("click", (e) => {
+      this.handleRemove(e, toDos);
     });
 
-    const status = "none";
-    checkbox.addEventListener("click", function () {
+    let status = "none";
+    checkbox.addEventListener("click", (e) => {
+      const removeItem = e.target.parentNode;
+      console.log(removeItem);
+
       if (status === "none") {
         checkbox.checked = "checked";
         status = "checked";
@@ -71,7 +66,20 @@ class TodoList {
         checkbox.checked = "none";
         status = "none";
       }
+
+      console.log(toDos);
     });
+  }
+
+  handleRemove(e, toDos) {
+    const removeItem = e.target.parentNode;
+    removeItem.remove();
+
+    const cleanTodo = toDos.filter((item) => {
+      return item.id !== parseInt(removeItem.id);
+    });
+
+    toDos = cleanTodo;
   }
 }
 
