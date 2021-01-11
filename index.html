@@ -3,14 +3,30 @@
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
-    <h2 id="number">0</h2>
-    <div>
-      <button id="increase">+1</button>
-      <button id="decrease">-1</button>
+    <!-- s : Counter -->
+    <div class="counter">
+      <h2 id="number">0</h2>
+      <div>
+        <button id="increase">+1</button>
+        <button id="decrease">-1</button>
+      </div>
     </div>
+    <!-- e : Counter -->
+
+    <!-- s : TodoList -->
+    <div class="todo-wrap">
+      <div class="todo-prompt">
+        <input type="text" placeholder="Write a to do" class="todo-input" />
+        <button type="button" class="todo-add">추가</button>
+      </div>
+
+      <ul class="todo-list"></ul>
+    </div>
+    <!-- e : TodoList -->
 
     <script src="src/index.js"></script>
   </body>

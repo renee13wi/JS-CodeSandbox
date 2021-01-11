@@ -1,3 +1,85 @@
 body {
   font-family: sans-serif;
 }
+input {
+  margin: 0;
+  padding: 0;
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "AppleSDGothicNeo", sans-serif;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.counter {
+  margin-bottom: 30px;
+}
+.todo-wrap {
+  width: 400px;
+}
+.todo-prompt {
+  position: relative;
+  height: 40px;
+  padding-right: 80px;
+}
+.todo-input {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid #999;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.todo-prompt button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 70px;
+  border-radius: 3px;
+  border: 1px solid #555;
+  background-color: #555;
+  color: #fff;
+}
+.todo-list .todo-checkbox:checked + span,
+.todo-list .todo-checkbox.done + span {
+  color: #999;
+  text-decoration: line-through;
+}
+.todo-list {
+  padding-top: 10px;
+}
+.todo-list li {
+  position: relative;
+  margin-top: 10px;
+  padding-right: 50px;
+  height: 25px;
+  line-height: 25px;
+}
+.todo-list .todo-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background-color: #888;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 25px;
+}
