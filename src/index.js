@@ -1,12 +1,8 @@
-const increase = document.querySelector("#increase");
-const decrease = document.querySelector("#decrease");
+import counter from "./component/counter";
+import TodoList from "./component/TodoList";
 
-let number = document.querySelector("#number");
+// counter
+counter();
 
-increase.addEventListener("click", function () {
-  number.innerText = parseInt(number.innerText, 10) + 1;
-});
-
-decrease.addEventListener("click", function () {
-  number.innerText = parseInt(number.innerText, 10) - 1;
-});
+const todoWrap = document.querySelector(".todo-wrap");
+new TodoList(todoWrap);
