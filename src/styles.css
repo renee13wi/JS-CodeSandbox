@@ -86,3 +86,11 @@ li {
 #title.clicked {
   color: red;
 }
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
